@@ -1,0 +1,14 @@
+body {
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+input:focus {
+	outline: none;
+}

@@ -1,0 +1,54 @@
+<section class='rename'>
+
+	<div class='rename__header'>
+		<header><p>Re:<span>Name</span></p></header>
+
+		<h1>Rename files</h1>
+
+		<form action='/path' method='post'>
+
+			{{#if success_msg}}
+				<div class='alert alert-success'>
+					<p>{{success_msg}}</p>
+				</div>
+			{{/if}}
+
+			{{#if error_msg}}
+				<div class='alert alert-danger'>
+					<p>{{error_msg}}</p>
+				</div>
+			{{else}}
+				<input type='text' readonly class='hidden' />
+			{{/if}}
+
+			<input type='text' name='folder' placeholder='Type the path' />
+			<input type='text' name='name' placeholder='Type the new name' />
+
+			<button type='submit' value='submit'>NEXT</button>
+
+		</form>
+	</div>
+
+	<footer>
+		<p class='owner'>Created by <span>witsite c.a</span></p>
+		<p class='version'>v 1.0.0</p>
+	</footer>
+</section>
+
+<section class='sort'>
+
+	{{#if files}}
+
+		<form action='/rename' method='post' id='list'>
+
+			{{#each files}}
+				<input type='text' readonly value='{{this}}' />
+			{{/each}}
+
+			<button type='submit' onclick=''>RENAME</button>
+
+		</form>
+	{{/if}}
+	<img src='/images/bg.png' alt='' />
+
+</section>
